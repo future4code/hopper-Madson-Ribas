@@ -1,0 +1,2 @@
+Aprendizados da semana
+Nessa semana de onboarding **Labenu** aprendi como usar um terminal **git**, como trabalhar com **versões** diferentes de um **projeto**, como **criar** e **gerenciar** novas **branches** e como fazer uma **Pull Request** no **GitHub**.
