@@ -15,7 +15,7 @@
 
 // 1 
 
-/*let pets = Number(prompt("Quantos bichinhos de estimação você tem?"))
+let pets = Number(prompt("Quantos bichinhos de estimação você tem?"))
 let nomePets = []
 if (pets > 0) {
     for (let index = 0; index < pets; index++) {
@@ -27,7 +27,7 @@ if (pets > 0) {
 }
 
 console.log(nomePets);
-*/
+
 // 2 
 // a. 
 function imprimeValores(array) {
