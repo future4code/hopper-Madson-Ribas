@@ -11,36 +11,21 @@ function retornaTamanhoArray(array) {
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
     return array.reverse()
-        // Desafio.
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    return array.sort(
-            function funcaoOrdena(a, b) {
-                return a - b
-            }
-        ) //Desafio.
+    return array.sort((a, b) => a - b)
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    const numerosPares = array.filter((numero) => {
-        return numero % 2 === 0
-    })
-    return numerosPares
-} //Desafio.
+    return array.filter((numero) => numero % 2 === 0)
+}
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    const paresAoQuadrado = array
-        .filter((numero) => {
-            return numero % 2 === 0
-        })
-        .map((numero) => {
-            return numero * numero
-        })
-    return paresAoQuadrado
+    return array.filter((numero) => numero % 2 === 0).map((numero) => numero * numero)
 }
 
 // EXERCÍCIO 06
@@ -162,7 +147,27 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+    let arrayTemp = []
 
+    function saldo(obj) {
+        let somaCompras = obj.compras
+            .reduce((prev, curr) => prev + curr, 0)
+        return {...obj,
+            saldoTotal: obj.saldoTotal - somaCompras,
+            compras: []
+        }
+    }
+
+    function saldoAtualizado(array) {
+        let i = 0
+        while (array.length > i) {
+            arrayTemp.push(saldo(array[i]))
+            i++
+        }
+        return arrayTemp
+    }
+    saldoAtualizado(contas)
+    return arrayTemp
 }
 
 // EXERCÍCIO 15A
