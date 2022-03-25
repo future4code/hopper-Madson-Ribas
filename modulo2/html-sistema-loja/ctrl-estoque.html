@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
-    <div>
-        <p>Loja da Magda</p>
+    <header class="titulo">
+        <h1>Loja da Magda!</h1>
+        <p class="chamada">Seus pés na moda!</p>
+    </header>
+
+    <div class="menu">
+        <a href="index.html"><button>Página Inicial</button></a>
+        <a href="add-produto.html"><button>Adicionar Produto</button></a>
+        <a href="funcionarios.html"><button>Funcionários</button></a>
     </div>
 
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
+    <h2 class="crtestoque">Controle de Estoque</h2>
 
-    <h2>Controle de Estoque</h2>
-
-    <table>
+    <table class="crtestoquetable" cellspacing="50" cellpadding="10">
         <tr>
             <th>Foto</th>
             <th>Descrição</th>
@@ -65,7 +66,30 @@
         </tr>
 
     </table>
-
+    <footer class="redes">
+        <div>
+            <br>
+            <p)>Nossas Redes</p>
+                <table class="redestable" cellspacing="10">
+                    <tr>
+                        <th><img src="./img/facebook.webp" alt="Facebook" width="25px" /></th>
+                        <th><img src="./img/instagram.webp" alt="Instagram" width="25px" /></th>
+                        <th><img src="./img/youtube.png" alt="You Tube" width="50px" /></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Facebook</p>
+                        </td>
+                        <td>
+                            <p>Instagram</p>
+                        </td>
+                        <td>
+                            <p>You Tube</p>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </footer>
 </body>
 
 </html>
