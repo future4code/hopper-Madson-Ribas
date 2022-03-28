@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
-    <div>
-        <p>Loja da Magda</p>
-    </div>
+    <header class="titulo">
+        <h1>Loja da Magda!</h1>
+        <p class="chamada">Seus pés na moda!</p>
+    </header>
 
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
+    <div class="menu">
+        <a href="index.html"><button>Página Inicial</button></a>
+        <a href="ctrl-estoque.html"><button>Controle de Estoque</button></a>
+        <a href="funcionarios.html"><button>Funcionários</button></a>
     </div>
 
 
@@ -30,29 +31,48 @@
 
         <div>
             <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
             <input type="text" id="descricao" name="descrição">
         </div>
 
         <div>
             <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
             <input type="number" id="preco" name="preço">
         </div>
 
         <div>
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
             <label for="quantidade">Quantidade disponível: </label>
             <input type="number" id="quantidade" name="quantidade">
         </div>
 
         <div class="form-add">
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
             <button type="submit">Adicionar</button>
         </div>
 
     </form>
-
+    <footer class="redes">
+        <div>
+            <br>
+            <p)>Nossas Redes</p>
+                <table class="redestable" cellspacing="10">
+                    <tr>
+                        <th><img src="./img/facebook.webp" alt="Facebook" width="25px" /></th>
+                        <th><img src="./img/instagram.webp" alt="Instagram" width="25px" /></th>
+                        <th><img src="./img/youtube.png" alt="You Tube" width="50px" /></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Facebook</p>
+                        </td>
+                        <td>
+                            <p>Instagram</p>
+                        </td>
+                        <td>
+                            <p>You Tube</p>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </footer>
 </body>
 
 </html>
