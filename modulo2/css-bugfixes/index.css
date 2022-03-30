@@ -68,7 +68,6 @@ div img {
 
 #container-de-descricao {
     padding-top: 50px;
-    width: auto;
     background-color: #2274a5;
     color: white;
 }
@@ -100,6 +99,8 @@ div:last-child {
 
 table {
     width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td button {
