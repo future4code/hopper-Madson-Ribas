@@ -134,3 +134,10 @@
         width: auto;
         background-color: white;
     }
+    
+    input {
+        margin-top: 5px;
+        border-top: #000000;
+        border-left: #000000;
+        border-right: #000000;
+    }
