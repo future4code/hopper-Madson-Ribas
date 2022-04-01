@@ -1,0 +1,73 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    row-gap: 7px;
+}
+
+#containerhead {
+    background-color: mediumvioletred;
+    display: grid;
+    grid-template-columns: 50px 10px 1fr 80px;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+    width: 99vw;
+}
+
+.icone {
+    height: 20px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/3;
+    color: black;
+    background-color: mediumvioletred;
+}
+
+.confeitaria {
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.login {
+    align-self: center;
+    height: 20px;
+    width: fit-content;
+    justify-self: center;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 633px;
+    row-gap: 10px;
+}
+
+.menus {
+    background-color: #f2d0e0;
+}
+
+.bolos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    justify-items: stretch;
+    justify-content: space-around;
+    column-gap: 10px;
+}
+
+.footer {
+    background-color: mediumvioletred;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 99vw;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#barra_lateral {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
