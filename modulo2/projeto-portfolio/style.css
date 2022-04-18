@@ -1,0 +1,231 @@
+#containerheadersticky {
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr 1fr 60PX;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    padding-left: 20px;
+    background-color: #05254c;
+    color: beige;
+    font-family: 'Playfair Display';
+    align-items: center;
+}
+
+#containerheadersticky:hover {
+    opacity: 1;
+}
+
+#apresentacao {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-family: 'Playfair Display';
+    height: 100vh;
+    justify-items: center;
+    background-color: beige;
+    color: #05254c;
+    position: static;
+    top: 0;
+}
+
+#ola {
+    font-size: 110px;
+    height: 50px;
+}
+
+#conhecer {
+    align-content: flex-start;
+    font-size: 80px;
+}
+
+#eu {
+    font-size: 50px;
+}
+
+#sobremim {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
+    background-color: beige;
+    height: 800px;
+    align-items: stretch;
+    text-align: center;
+    justify-items: center;
+    font-family: 'Playfair Display';
+    font-size: 25px;
+    color: #05254c;
+}
+
+#titulo {
+    display: block;
+    background-color: beige;
+    font-family: 'Playfair Display';
+    font-size: 50px;
+    color: #05254c;
+    text-align: center;
+    height: 300px;
+    align-content: center;
+}
+
+#trabalhos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: beige;
+    align-items: center;
+    justify-items: center;
+}
+
+.imagem {
+    position: relative;
+    width: 1000px;
+}
+
+.img {
+    display: block;
+    width: 100%;
+}
+
+.descricao {
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: beige;
+    font-family: 'Playfair Display' sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 100ms;
+}
+
+.descricao:hover {
+    opacity: 1;
+}
+
+.descricao {
+    transform: translateY(20px);
+    transition: transform 0.5s;
+}
+
+.descricao:hover {
+    transform: translateY(0);
+}
+
+#portfolio {
+    display: block;
+    background-color: beige;
+    font-family: 'Playfair Display';
+    font-size: 75px;
+    font-weight: 700;
+    color: #05254c;
+    text-align: center;
+    height: 240px;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+}
+
+#footer {
+    display: grid;
+    grid-template-rows: 45px 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 23vh;
+    background-color: #05254c;
+}
+
+#redes {
+    font-family: 'Playfair Display';
+    font-size: 0.8em;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    color: beige;
+}
+
+.imgft {
+    padding-bottom: 20px;
+}
+
+#contatobody {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 9.5vh 65.5vh 23vh;
+    background-color: beige;
+}
+
+.box {
+    align-self: center;
+}
+
+.labelInput {
+    color: #05254c;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+fieldset {
+    border: 3px solid #05254c;
+}
+
+legend {
+    border: 1px solid #05254c;
+    padding: 10px;
+    text-align: center;
+    background-color: #05254c);
+    border-radius: 8px;
+    color: rgb(48, 48, 48);
+}
+
+.inputbox {
+    position: relative;
+}
+
+.InputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #05254c;
+    outline: none;
+    color: #05254c;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.InputUser:focus~.labelInput,
+.InputUser:valid~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #05254c;
+}
+
+#submit {
+    background-image: linear-gradient(to right, #05254c, #043d84);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: beige;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-image: linear-gradient(to right, #043d84, #05254c);
+}
