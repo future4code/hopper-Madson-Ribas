@@ -1,5 +1,47 @@
 import axios from "axios";
 import React from "react";
+import styled from 'styled-components';
+
+
+const Titulo = styled.h1`
+    font-size: 3em;
+    text-align: center;
+    color: #010177;
+    `
+
+const Header = styled.div`
+    display: grid:
+    grid-template-columns: 10vw 90vw;
+`
+
+const UsuariosContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const ListaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-width: 300px
+`
+const UsuarioContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #56568C;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 3px;
+`
+const BotaoDelete = styled.button`
+    color: red;
+    margin: 10px
+`
+const UsuarioP = styled.p`
+    color: #D1D1E6;
+    margin: 10px;
+`
 
 export default class Lista extends React.Component {
 
@@ -46,21 +88,28 @@ export default class Lista extends React.Component {
 
     render() {
         return(
-            <>
-                <h1> Tela de Lista</h1>
-                <div>
-                    <button onClick={this.props.filhoDois}>Troca de Tela</button>
+            <>  
+                <button onClick={this.props.filhoDois}>Voltar</button>
+                <Header>
+                <Titulo>Lista de Usuários</Titulo>
+                </Header>
+                <UsuariosContainer>
+                    <h3>Usuários cadastrados</h3>
                     {
                         this.state.usuarios.map((usuario) => {
                             return (
-                                <ul>
-                                    <li>{ usuario.name }</li>
-                                    <button onClick={() => {if(window.confirm("Deseja deletar este usuário?")){this.delUsuario(usuario.id)}}}>Deletar</button>
-                                </ul>
+                                <ListaContainer>
+                                    <UsuarioContainer>
+                                        <UsuarioP>
+                                            { usuario.name }
+                                        </UsuarioP>
+                                        <BotaoDelete onClick={() => {if(window.confirm("Deseja deletar este usuário?")){this.delUsuario(usuario.id)}}}>X</BotaoDelete>
+                                    </UsuarioContainer>
+                                </ListaContainer>
                             )
                         })
                     }
-                </div>
+                </UsuariosContainer>
             </>
         )
     }

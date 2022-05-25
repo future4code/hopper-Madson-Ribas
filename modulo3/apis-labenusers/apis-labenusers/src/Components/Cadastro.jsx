@@ -1,5 +1,23 @@
 import React from "react";
 import axios from "axios";
+import styled from 'styled-components';
+
+
+const Titulo = styled.h1`
+    font-size: 3em;
+    text-align: center;
+    color: #010177;
+    `
+
+const Header = styled.div`
+    display: grid:
+    grid-template-columns: 10vw 90vw;
+`
+const CadastroContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 
 
 export default class Cadastro extends React.Component {
@@ -34,16 +52,24 @@ export default class Cadastro extends React.Component {
 
     render() {
         return(
-            <>
-                <h1> Tela de Cadastro</h1>
-                <div>
-                    <button onClick={this.props.filhoUm}>Troca de Tela</button>
-                </div> <br></br>
-                <input placeholder="Nome" value={this.state.nome} onChange={this.onChangeNome}/>
-                <input placeholder="e-Mail" value={this.state.email} onChange={this.onChangeEmail}/>
-                <div>
-                    <button onClick={this.cadastroUsuarios}>Cadastar usuario</button>
-                </div>
+            <>  
+                 <Header>
+                    <button onClick={this.props.filhoUm}>Usuários</button>
+                    <Titulo>LabenUsers</Titulo>
+                </Header> <br></br>
+                <CadastroContainer>
+                    <h3>Cadastro de Usuário</h3>
+                    <h4>Novo usuário</h4>
+                    <label>Nome</label>
+                    <input value={this.state.nome} onChange={this.onChangeNome}/>
+                    <br></br>
+                    <label>E-Mail</label>
+                    <input value={this.state.email} onChange={this.onChangeEmail}/>
+                    <br></br>
+                    <div>
+                        <button onClick={this.cadastroUsuarios}>Cadastar usuario</button>
+                    </div>
+                </CadastroContainer>
             </>
         )
     }
