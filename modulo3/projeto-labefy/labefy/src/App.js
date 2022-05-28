@@ -1,28 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Cadastro from "./Components/Cadastro";
+import Lista from "./Components/Lista";
+import styled from 'styled-components';
 
-function App() {
-    return ( <
-        div className = "App" >
-        <
-        header className = "App-header" >
-        <
-        img src = { logo }
-        className = "App-logo"
-        alt = "logo" / >
-        <
-        p >
-        Edit < code > src / App.js < /code> and save to reload. <
-        /p> <
-        a className = "App-link"
-        href = "https://reactjs.org"
-        target = "_blank"
-        rel = "noopener noreferrer" >
-        Learn React <
-        /a> <
-        /header> <
-        /div>
-    );
+const Page = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr;
+`
+
+class App extends React.Component {
+
+  state = {
+    telaAtual: "cadastro"
+  }
+
+  trocaDeTela = () => {
+    this.setState({
+      telaAtual: this.state.telaAtual=== "cadastro"
+      ? "lista"
+      : "cadastro"
+    })
+  }
+
+
+  render() {
+    return (
+    <>
+      <Page >
+        <Cadastro/>
+        <Lista/>
+        <div>
+          <h1>
+          Musicas
+          </h1>
+        </div>
+      </Page>
+      {/* {
+        this.state.telaAtual === "cadastro" 
+        ? <Cadastro filhoUm={this.trocaDeTela}/> 
+        : <Lista filhoDois={this.trocaDeTela}/>
+      }
+ */}
+
+    </>
+  )
+}
 }
 
 export default App;
