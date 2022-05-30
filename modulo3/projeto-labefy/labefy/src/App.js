@@ -171,7 +171,6 @@ getPlaylists = () => {
 }
 
 delPlaylist = (id) => {
-  // const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
   const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
   axios.delete(url, {
       headers: {
@@ -231,26 +230,21 @@ pause = (trackurl) => {
     <>
       <Page >
         <div>
-        <Main>
-                 <Header>
-                    {/* <button onClick={this.props.filhoUm}>Usuários</button> */}
-                    <Titulo>Labefy</Titulo>
-                </Header> <br></br>
-                <CadastroContainer>
-                    <h3>Nova Playlist</h3>
-                    <label>Nome</label>
-                    <input value={this.state.nome} onChange={this.onChangeNome}/>
-                    {/* <br></br>
-                    <label>E-Mail</label>
-                    <input value={this.state.email} onChange={this.onChangeEmail}/> */}
-                    <br></br>
-                    <div>
-                        <button onClick={this.novaPlaylist}>Criar</button>
-                    </div>
-                </CadastroContainer>
-                </Main>
+          <Main>
+            <Header>
+              <Titulo>Labefy</Titulo>
+            </Header> <br></br>
+            <CadastroContainer>
+              <h3>Nova Playlist</h3>
+              <label>Nome</label>
+                <input value={this.state.nome} onChange={this.onChangeNome}/>
+              <br></br>
+              <div>
+                <button onClick={this.novaPlaylist}>Criar</button>
+              </div>
+            </CadastroContainer>
+          </Main>
         </div>
-
         <Lista>
           <Main>
             <Header>
