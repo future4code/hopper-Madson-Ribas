@@ -1,0 +1,57 @@
+.mainADMHomePage {
+    background-image: url("../Img/BackgoundApp.jpg");
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    background-position: center top -50px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+}
+
+.titulo {
+    color: white;
+    font-size: 4em;
+    cursor: pointer;
+    margin: 20px;
+    margin-left: 100px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.logout {
+    color: white;
+    font-size: 3.5em;
+    cursor: pointer;
+    margin: 20px;
+    margin-right: 100px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.option {
+    color: white;
+    font-size: 8em;
+    width: 500px;
+    cursor: pointer;
+}

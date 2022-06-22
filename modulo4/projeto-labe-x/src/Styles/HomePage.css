@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .main {
     background-image: url("../Img/BackgroundHome.jpg");
     background-repeat: no-repeat;
