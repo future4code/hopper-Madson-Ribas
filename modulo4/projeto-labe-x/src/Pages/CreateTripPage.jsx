@@ -1,12 +1,16 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 import Header from "../Components/Header";
 import { useAutenticaUsuario } from "../Components/Hooks/useAutenticaUsuario";
+import "../Styles/CreateTripPage.css"
 
 const CreateTripPage = () => {
     
     useAutenticaUsuario()
+
+    const navigate = useNavigate()
 
     const [name, setName] = useState("")
     const [planet, setPlanet] = useState("")
@@ -34,7 +38,7 @@ const CreateTripPage = () => {
 
         console.log(body);
 
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson-pereira-hopper/trips", body, headers)
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/trips", body, headers)
         .then(() => {
             alert("Viagem criada com sucesso!")
         })
@@ -48,13 +52,20 @@ const CreateTripPage = () => {
     <div className="main-page">
         <Header/>
         <div className="main-container">
+            <div className="adminHeader">
+                <p className="createTripTitulo" onClick={() => { navigate("/") }}>LabeX</p>
+                <p className="adminHeaderTitle" onClick={() => { navigate("/admin/trips") }}>Viagens</p>
+                <p className="adminHeaderTitle" onClick={() => { navigate("/admin/home") }}>Voltar</p>
+                <p className="adminHeaderTitle">Logout</p>
+            </div>
             <div className="input-container">
-                <input type="text" placeholder="Nome" onChange={(event) => {setName(event.target.value)}}/>
-                <input type="text" placeholder="Planeta" onChange={(event) => {setPlanet(event.target.value)}}/>
-                <input type="date" placeholder="Data" onChange={(event) => {setDate(event.target.value)}}/>
-                <input type="text" placeholder="Descrição" onChange={(event) => {setDescription(event.target.value)}}/>
-                <input type="number" placeholder="Duração em dias" onChange={(event) => {setDurationInDays(event.target.value)}}/>
-                <button onClick={() => { createTrip() }}>Criar viagem</button>
+                <p className="novaViagemTitulo">Novo Destino</p>
+                <input className="createTripInput" type="text" placeholder="Nome" onChange={(event) => {setName(event.target.value)}}/>
+                <input className="createTripInput" type="text" placeholder="Planeta" onChange={(event) => {setPlanet(event.target.value)}}/>
+                <input className="createTripInput" type="date" placeholder="Data" onChange={(event) => {setDate(event.target.value)}}/>
+                <input className="createTripInput" type="number" placeholder="Duração em dias" onChange={(event) => {setDurationInDays(event.target.value)}}/>
+                <textarea cols={30} rows={5} className="createTripInputDescr"  type="text" placeholder="Descrição" onChange={(event) => {setDescription(event.target.value)}}/>
+                <button className="button" onClick={() => { createTrip() }}>Criar viagem</button>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ const LoginPage = () => {
             password: senha
         }
 
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson-pereira-hopper/login", body,)
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/login", body,)
         .then((resp) => {
             window.localStorage.setItem("token", resp.data.token)
             console.log(resp.data);

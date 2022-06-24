@@ -14,7 +14,7 @@ const SignUpPage = () => {
             password: senha
         }
 
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson-pereira-hopper/signup", body,)
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/signup", body,)
         .then((resp) => {
             console.log(resp);
         }).catch((error) => {
