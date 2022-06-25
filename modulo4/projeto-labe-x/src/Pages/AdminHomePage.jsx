@@ -16,7 +16,7 @@ const AdminHomePage = () => {
         <div className="main-container">
          
             <div className="header">
-                <p className="titulo">LabeX</p>
+                <p className="titulo" onClick={() => { navigate("/") }}>LabeX</p>
                 <p className="logout">Logout</p>
             </div>
 

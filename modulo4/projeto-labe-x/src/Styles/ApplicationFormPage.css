@@ -1,0 +1,112 @@
+.main-page-form {
+    background-image: url("../Img/BackgoundApp.jpg");
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userHeader {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+}
+
+.userTitulo {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0;
+    margin-left: 100px;
+    cursor: pointer;
+    grid-column: 1;
+    position: relative;
+    left: -300px;
+    top: -50px;
+    height: 100px;
+}
+
+.userTitle {
+    color: white;
+    font-size: 3.5em;
+    cursor: pointer;
+    grid-column: 3;
+    margin: 0;
+    height: 60px;
+    padding: 0;
+    position: relative;
+    top: 40px;
+    left: -100px;
+}
+
+.userLogin {
+    color: white;
+    font-size: 3.5em;
+    cursor: pointer;
+    grid-column: 4;
+    margin: 0;
+    height: 60px;
+    padding: 0;
+    position: relative;
+    top: 40px;
+    left: -100px;
+}
+
+.input-container-form {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    background-color: rgba(63, 60, 89, 0.3);
+    padding: 20px;
+    border-radius: 25px;
+    gap: 30px;
+    align-items: center;
+    margin-right: 600px;
+}
+
+.formTripInput {
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.formTripInputDescr {
+    height: 90px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.viagemTitulo {
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    font-size: 2em;
+    padding: 10px;
+    width: 350px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: #7DDBF9;
+    cursor: pointer;
+    margin: 30px;
+}

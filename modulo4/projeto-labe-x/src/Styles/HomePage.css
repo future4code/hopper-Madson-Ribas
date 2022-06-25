@@ -16,6 +16,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: absolute;
+    height: 100vh;
 }
 
 .titulo {
@@ -33,7 +34,7 @@ body {
     font-size: 3.5em;
     grid-column: 7;
     position: relative;
-    left: 120px;
+    left: 50px;
     top: 50px;
     cursor: pointer;
 }

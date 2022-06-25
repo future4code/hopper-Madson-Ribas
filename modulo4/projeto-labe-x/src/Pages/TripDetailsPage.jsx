@@ -12,6 +12,7 @@ const TripDetailsPage = () => {
     const [trips, setTrips] = useState([])
     const [trip, setTrip] = useState(null)
     const [candidate, setCandidate] = useState([])
+    const [aprovados, setAprovados] = useState([])
 
     useEffect(() => {
         axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/trips")
@@ -43,12 +44,11 @@ const TripDetailsPage = () => {
             console.log(resp.data.trip);
             setTrip(resp.data.trip)
             setCandidate(resp.data.trip.candidates)
+            setAprovados(resp.data.trip.approved)
         }).catch((error) => {
             console.log(error);
         })
     }
-        
-    
 
     return (
         <div className="main-page-details">
@@ -64,33 +64,40 @@ const TripDetailsPage = () => {
 
                 <div className="page-container">
 
-                    <div className="trips-container">
+                    <div className="trips-container-Details">
                         <p className="detailsTripTitulo">Destino</p>
-                        {
-                            trips.map((trip) => {
-                                return (
-                                    <p className="trips" key={trip.id} onClick={() => {getTripDetail(trip.id)}}> { trip.name } </p>
-                                )
-                            })
-                        }
+                        <div className="destinos">
+                            {
+                                trips.map((trip) => {
+                                    return (
+                                        <p className="trips" key={trip.id} onClick={() => {getTripDetail(trip.id)}}> { trip.name } </p>
+                                    )
+                                })
+                            }
+                        </div>
                         <p className="aprovados">Aprovados</p>
-                        {
-                            candidate &&
-                            candidate.map((candidate) => {
-                                return (
-                                    <p className="candidatos" key={candidate.id}> - {candidate.name} </p>
-                                )
-                            })
-                        }
+                        <div  className="aprovados-scroll">
+                            {
+                                aprovados &&
+                                aprovados.map((candidate) => {
+                                    return (
+                                        <p className="candidatos" key={candidate.id}> - {candidate.name} </p>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 
                 <div className="candidatos-container">
                     <p className="detailsTripTituloCandidatos">Candidatos</p>
-                    {
+                    <div className="mapDeCandidatos">
+                         {
                         candidate &&
                         candidate.map((candidate) => {
                             return (
                                 <Candidato key={candidate.id}
+                                idCandidato={candidate.id}
+                                idViagem={trip.id}
                                 name={candidate.name}
                                 idade={candidate.age}
                                 profissao={candidate.profession}
@@ -100,6 +107,7 @@ const TripDetailsPage = () => {
                             )
                         })
                     }
+                    </div>
                 </div>
                 </div>
             </div>

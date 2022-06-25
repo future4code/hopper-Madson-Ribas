@@ -43,7 +43,7 @@ const LoginPage = () => {
                 <input type="password" placeholder="Senha" className="input" onChange={(event) => {setSenha(event.target.value)}}/>
             </div>
 
-            <div><button className="btn" onClick={() => {onClickLogin()}}>Entrar</button></div>
+            <div><button className="btn-login" onClick={() => {onClickLogin()}}>Entrar</button></div>
 
         </div>
     </div>

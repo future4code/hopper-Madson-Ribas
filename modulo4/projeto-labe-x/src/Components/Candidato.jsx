@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import axios from "axios";
 
 const Card = styled.div`
     display: flex;
-    flex-direction: colunm;
+    flex-direction: column;
     width: 400px;
+    background-color: rgba(48, 46, 69, 0.578);
+    border-radius: 30px;
+    padding: 20px;
+    align-items: center;
 `
 const Aprova = styled.div`
     display: flex;
@@ -11,16 +16,18 @@ const Aprova = styled.div`
 `
 const BtnAprova = styled.button`
     padding: 10px;
-    width: 230px;
-    height: 80px;
+    font-size:1.2em;
+    width: 180px;
+    height: 50px;
     border-radius: 40px;
     background-color: #7DDBF9;
     cursor: pointer;
 `
 const BtnNaoAprova = styled.button`
     padding: 10px;
-    width: 230px;
-    height: 80px;
+    font-size:1.2em;
+    width: 180px;
+    height: 50px;
     border-radius: 40px;
     background-color: #ec3131;
     cursor: pointer;
@@ -43,13 +50,33 @@ const InputDescricao = styled.p`
 `
 
 const Candidato = (props) => {
+
+    const aprovaCandidato = (tripId, candidateId, escolha) => {
+        const headers = {
+            headers: {
+                auth: localStorage.getItem("token")
+            }
+        }
+
+        const body = {
+            "approve": escolha
+        }
+
+        axios.put(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/trips/${tripId}/candidates/${candidateId}/decide`, body, headers)
+        .then((resp) => {
+            console.log(resp);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
     return (
         <Card>
             <Aprova>
-                <BtnAprova>Aprovar</BtnAprova>
-                <BtnNaoAprova>Recusar</BtnNaoAprova>
+                <BtnAprova onClick={() =>{aprovaCandidato(props.idViagem, props.idCandidato, true)}}>Aprovar</BtnAprova>
+                <BtnNaoAprova onClick={() =>{aprovaCandidato(props.idViagem, props.idCandidato, false)}}>Recusar</BtnNaoAprova>
             </Aprova>
-            <InputCandidato>{props.nome}</InputCandidato>
+            <InputCandidato>{props.name}</InputCandidato>
             <InputCandidato>{props.idade}</InputCandidato>
             <InputCandidato>{props.profissao}</InputCandidato>
             <InputCandidato>{props.nacionalidade}</InputCandidato>

@@ -36,14 +36,14 @@
 
 .detailsTripTitulo {
     color: white;
-    font-size: 5em;
+    font-size: 4em;
     cursor: pointer;
     margin: 0;
 }
 
 .detailsTripTituloCandidatos {
     color: white;
-    font-size: 5em;
+    font-size: 4em;
     cursor: pointer;
     margin: 0;
     text-align: right;
@@ -51,7 +51,7 @@
 
 .adminHeaderTitle {
     color: white;
-    font-size: 3.5em;
+    font-size: 3em;
     cursor: pointer;
     margin: 0;
     height: 60px;
@@ -61,7 +61,7 @@
     left: -100px;
 }
 
-.trips-container {
+.trips-container-Details {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -71,12 +71,13 @@
 .trips {
     color: white;
     background-color: black;
-    font-size: 1.8em;
-    height: 50px;
+    font-size: 1.5em;
+    height: 40px;
     width: 400px;
     border-radius: 30px;
-    margin: 10px;
-    padding-top: 15px;
+    margin: 5px;
+    padding-top: 10px;
+    cursor: pointer;
 }
 
 .page-container {
@@ -99,4 +100,20 @@
     display: flex;
     flex-direction: column;
     width: 70vw;
+}
+
+.mapDeCandidatos {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    margin: 50px;
+    overflow-x: scroll;
+}
+
+.destinos {
+    overflow-y: scroll;
+}
+
+.aprovados-scroll {
+    overflow-y: scroll;
 }
