@@ -30,6 +30,10 @@ const TripDetailsPage = () => {
 
     const navigate = useNavigate()
 
+    const logout = () => {
+        window.localStorage.clear()
+        navigate("/login")
+    }
     
     const getTripDetail = (id) => {
 
@@ -59,7 +63,7 @@ const TripDetailsPage = () => {
                     <p className="createTripTitulo" onClick={() => { navigate("/") }}>LabeX</p>
                     <p className="adminHeaderTitle" onClick={() => { navigate("/admin/trips/create") }}>Nova Viagem</p>
                     <p className="adminHeaderTitle" onClick={() => { navigate("/admin/home") }}>Voltar</p>
-                    <p className="adminHeaderTitle">Logout</p>
+                    <p className="adminHeaderTitle" onClick={() => {if (window.confirm("Deseja sair?")) { logout() }}}>Logout</p>
                 </div>
 
                 <div className="page-container">

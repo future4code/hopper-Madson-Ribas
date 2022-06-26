@@ -9,6 +9,11 @@ const AdminHomePage = () => {
     useAutenticaUsuario()
 
     const navigate = useNavigate() 
+    
+    const logout = () => {
+        window.localStorage.clear()
+        navigate("/login")
+    }
 
     return (
         <div className="mainADMHomePage">
@@ -17,7 +22,7 @@ const AdminHomePage = () => {
          
             <div className="header">
                 <p className="titulo" onClick={() => { navigate("/") }}>LabeX</p>
-                <p className="logout">Logout</p>
+                <p className="logout" onClick={() => {if (window.confirm("Deseja sair?")) { logout() }}}>Logout</p>
             </div>
 
             <div className="options-container">

@@ -43,6 +43,7 @@ const ListTripPage = () => {
                                     <p className="destino"> {trip.planet} </p>
                                     <p className="descricao"> Duração: {trip.durationInDays} dias.</p>
                                     <p className="data">Data: {trip.date} </p>
+                                    <button className="btn-aplicar" onClick={() => {navigate(`/trips/application/${trip.id}`)}}>Aplicar a viavem</button>
                                 </div>
                             )
                         })

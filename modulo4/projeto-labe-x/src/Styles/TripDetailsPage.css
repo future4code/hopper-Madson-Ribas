@@ -66,6 +66,8 @@
     flex-direction: column;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.397);
+    max-height: 600px;
+    height: 600px;
 }
 
 .trips {
@@ -78,6 +80,15 @@
     margin: 5px;
     padding-top: 10px;
     cursor: pointer;
+    transition: 150ms;
+}
+
+.trips:focus {
+    color: #7DDBF9;
+}
+
+.trips:hover {
+    font-size: 1.8em;
 }
 
 .page-container {
@@ -108,6 +119,7 @@
     gap: 30px;
     margin: 50px;
     overflow-x: scroll;
+    min-height: 500px;
 }
 
 .destinos {
@@ -116,4 +128,5 @@
 
 .aprovados-scroll {
     overflow-y: scroll;
+    min-height: 100px;
 }

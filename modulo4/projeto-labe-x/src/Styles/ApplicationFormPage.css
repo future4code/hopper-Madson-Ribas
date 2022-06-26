@@ -78,6 +78,29 @@
     font-size: 1.3em;
     padding-left: 30px;
     padding-right: 30px;
+    margin: 10px;
+    width: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.formTripOption {
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
+    width: 760px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.formTrip {
+    height: 30px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
     width: 700px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -86,6 +109,7 @@
     height: 90px;
     border-radius: 15px;
     font-size: 1.3em;
+    margin: 10px;
     padding-left: 30px;
     padding-right: 30px;
     width: 700px;

@@ -20,7 +20,7 @@ const Rotas = () => {
               <Route path='/' element={<HomePage/>}/>
               <Route path='/admin/home' element={<AdminHomePage/>}/>
               <Route path='/trips/list'element={<ListTripPage/>}/>
-              <Route path='/trips/application' element={<AplicationFormPage/>}/>
+              <Route path='/trips/application/:id' element={<AplicationFormPage/>}/>
               <Route path='/login' element={<LoginPage/>}/>
               <Route path='/admin/trips/create' element={<CreateTripPage/>}/>
               <Route path='/admin/trips' element={<TripDetailsPage/>}/>

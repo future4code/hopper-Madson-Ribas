@@ -12,23 +12,28 @@ const CreateTripPage = () => {
 
     const navigate = useNavigate()
 
-    const [name, setName] = useState("")
-    const [planet, setPlanet] = useState("")
-    const [date, setDate] = useState("")
-    const [description, setDescription] = useState("")
-    const [durationInDays, setDurationInDays] = useState("")
+    const [form, setForm] = useState({
+        name: "",
+        planet: "", 
+        date: "",
+        description: "",
+        durationInDays: ""
+    })
 
-    const createTrip = () => {
+    const onChange = (event) => {
+        setForm({...form, [event.target.name]: event.target.value})
+    }
 
-        const data = new Date(date).toLocaleDateString("pt-br")
+    const logout = () => {
+        window.localStorage.clear()
+        navigate("/login")
+    }
+
+    const createTrip = (event) => {
+        event.preventDefault();
         
-        const body = {
-            name: name,
-            planet: planet, 
-            date: data,
-            description: description,
-            durationInDays: durationInDays
-        }
+        const body = form
+        
 
         const headers = {
             headers: {
@@ -45,6 +50,14 @@ const CreateTripPage = () => {
         .catch((err) => {
             alert("Falha ao criar viagem")
             console.log(err);
+        }).finally(() => {
+            setForm({
+                name: "",
+                planet: "", 
+                date: "",
+                description: "",
+                durationInDays: ""
+            })
         })
     }
 
@@ -56,16 +69,29 @@ const CreateTripPage = () => {
                 <p className="createTripTitulo" onClick={() => { navigate("/") }}>LabeX</p>
                 <p className="adminHeaderTitle" onClick={() => { navigate("/admin/trips") }}>Viagens</p>
                 <p className="adminHeaderTitle" onClick={() => { navigate("/admin/home") }}>Voltar</p>
-                <p className="adminHeaderTitle">Logout</p>
+                <p className="adminHeaderTitle" onClick={() => {if (window.confirm("Deseja sair?")) { logout() }}}>Logout</p>
             </div>
             <div className="input-container">
-                <p className="novaViagemTitulo">Novo Destino</p>
-                <input className="createTripInput" type="text" placeholder="Nome" onChange={(event) => {setName(event.target.value)}}/>
-                <input className="createTripInput" type="text" placeholder="Planeta" onChange={(event) => {setPlanet(event.target.value)}}/>
-                <input className="createTripInput" type="date" placeholder="Data" onChange={(event) => {setDate(event.target.value)}}/>
-                <input className="createTripInput" type="number" placeholder="Duração em dias" onChange={(event) => {setDurationInDays(event.target.value)}}/>
-                <textarea cols={30} rows={5} className="createTripInputDescr"  type="text" placeholder="Descrição" onChange={(event) => {setDescription(event.target.value)}}/>
-                <button className="button" onClick={() => { createTrip() }}>Criar viagem</button>
+                <form onSubmit={createTrip}>
+                    <p className="novaViagemTitulo">Novo Destino</p>
+                    <input required className="createTripInput" name="name" value={form.name} type="text" placeholder="Nome" onChange={onChange}/>
+                    <select required className="createTripOption" name="planet" value={form.planet} onChange={onChange}>
+                        <option value="">Selecione o Destino</option>
+                        <option value="Mercúrio">Mercúrio</option>
+                        <option value="Vênus">Vênus</option>
+                        <option value="Terra">Terra</option>
+                        <option value="Marte">Marte</option>
+                        <option value="Júpiter">Júpiter</option>
+                        <option value="Saturno">Saturno</option>
+                        <option value="Urano">Urano</option>
+                        <option value="Netuno">Netuno</option>
+                        <option value="Plutão">Plutão</option>
+                    </select>
+                    <input required className="createTripInput" name="date" value={form.date} type="date" placeholder="Data" onChange={onChange}/>
+                    <input required className="createTripInput" name="durationInDays" value={form.durationInDays} type="number" placeholder="Duração em dias" onChange={onChange}/>
+                    <textarea required cols={30} rows={5} className="createTripInputDescr" name="description" value={form.description}  type="text" placeholder="Descrição" onChange={onChange}/>
+                    <button className="button">Criar viagem</button>
+                </form>
             </div>
         </div>
     </div>

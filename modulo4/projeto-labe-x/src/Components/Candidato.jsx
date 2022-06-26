@@ -73,8 +73,12 @@ const Candidato = (props) => {
     return (
         <Card>
             <Aprova>
-                <BtnAprova onClick={() =>{aprovaCandidato(props.idViagem, props.idCandidato, true)}}>Aprovar</BtnAprova>
-                <BtnNaoAprova onClick={() =>{aprovaCandidato(props.idViagem, props.idCandidato, false)}}>Recusar</BtnNaoAprova>
+                <form onSubmit={() =>{aprovaCandidato(props.idViagem, props.idCandidato, true)}}>
+                    <BtnAprova>Aprovar</BtnAprova>
+                </form>    
+                <form onSubmit={() =>{aprovaCandidato(props.idViagem, props.idCandidato, false)}}>
+                    <BtnNaoAprova>Recusar</BtnNaoAprova>
+                </form>
             </Aprova>
             <InputCandidato>{props.name}</InputCandidato>
             <InputCandidato>{props.idade}</InputCandidato>

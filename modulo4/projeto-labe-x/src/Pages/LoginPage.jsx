@@ -12,7 +12,9 @@ const LoginPage = () => {
     
     const navigate = useNavigate()
 
-    const onClickLogin = () => {
+    const onClickLogin = (event) => {
+        event.preventDefault();
+        
         const body = {
             email: email,
             password: senha
@@ -26,9 +28,6 @@ const LoginPage = () => {
         }).catch((error) => {
             alert("Usuario ou senha incorretos")
             console.log(error)
-        }).finally(()=>{
-            setEmail("")
-            setSenha("")
         })
     }
 
@@ -38,13 +37,14 @@ const LoginPage = () => {
         <div className="main-container">
             <p className="titulo" onClick={()=> {navigate("/")}}>LabeX</p>
 
-            <div className="inputs">
-                <input type="email" placeholder="Email" className="input" onChange={(event) => {setEmail(event.target.value)}}/>
-                <input type="password" placeholder="Senha" className="input" onChange={(event) => {setSenha(event.target.value)}}/>
-            </div>
+            <form onSubmit={onClickLogin}> 
+                <div className="inputs">
+                    <input type="email" placeholder="Email" className="input" required onChange={(event) => {setEmail(event.target.value)}}/>
+                    <input type="password" placeholder="Senha" className="input" required onChange={(event) => {setSenha(event.target.value)}}/>
+                </div>
 
-            <div><button className="btn-login" onClick={() => {onClickLogin()}}>Entrar</button></div>
-
+                <div><button className="btn-login">Entrar</button></div>
+            </form>
         </div>
     </div>
     )
