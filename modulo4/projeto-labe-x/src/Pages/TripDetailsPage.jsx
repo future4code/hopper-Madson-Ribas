@@ -54,6 +54,24 @@ const TripDetailsPage = () => {
         })
     }
 
+    const deleteTrip = (tripId) => {
+
+        const headers = {
+            headers: {
+                auth: localStorage.getItem("token")
+            }
+        }
+
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/madson/trips/${tripId}`, headers)
+        .then(() => {
+            alert("Viagem deletada")
+        }).catch((err) => {
+            console.log(err);
+        }).finally(() => {
+            window.location.reload()
+        })
+    }
+
     return (
         <div className="main-page-details">
             <Header/>
@@ -74,7 +92,7 @@ const TripDetailsPage = () => {
                             {
                                 trips.map((trip) => {
                                     return (
-                                        <p className="trips" key={trip.id} onClick={() => {getTripDetail(trip.id)}}> { trip.name } </p>
+                                        <p className="trips" key={trip.id} onClick={() => {getTripDetail(trip.id)}}> { trip.name } <button onClick={() => {if (window.confirm("Deseja apagar esta viagem?")){deleteTrip(trip.id)}}}>X</button> </p>
                                     )
                                 })
                             }
