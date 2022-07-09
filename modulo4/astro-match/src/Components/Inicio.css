@@ -1,0 +1,104 @@
+.bio {
+    font-size: 1.2em;
+}
+
+.fundo {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+    width: 75vw;
+    background-color: #e2d0db;
+    align-items: center;
+    justify-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 800px;
+    background-color: beige;
+    position: absolute;
+    grid-column: 2;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    bottom: 300px;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.fotoPerfil {
+    position: relative;
+    height: 1000px;
+}
+
+.fotoPerfil img {
+    width: 450px;
+    height: 800px;
+}
+
+.btnNao {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 4em;
+    color: red;
+    font-weight: 700;
+    border: solid red 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+    transform-origin: center;
+    opacity: 1;
+}
+
+.btnNao:hover {
+    transform: scale(1.2);
+}
+
+.btnNao:active {
+    transform: scale(1);
+    opacity: 0;
+}
+
+.btnSim {
+    position: relative;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 5em;
+    color: #FF2BAA;
+    border: solid #FF2BAA 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+    transform-origin: center;
+    opacity: 1;
+}
+
+.btnSim:hover {
+    transform: scale(1.2);
+}
+
+.btnSim:active {
+    transform: scale(1);
+    opacity: 0;
+}
+
+.containerBtn {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 300px;
+    justify-content: space-around;
+}
