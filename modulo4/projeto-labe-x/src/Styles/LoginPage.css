@@ -1,0 +1,51 @@
+.mainLogin {
+    background-image: url("../Img/BackgoundApp.jpg");
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    background-position: right -50px bottom -50px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 10em;
+    margin-bottom: 0;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    background-color: rgba(63, 60, 89, 0.3);
+    padding: 50px;
+    border-radius: 25px;
+    gap: 70px;
+}
+
+.input {
+    height: 70px;
+    border-radius: 35px;
+    font-size: 3em;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-login {
+    font-size: 3em;
+    padding: 10px;
+    width: 230px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #7DDBF9;
+    cursor: pointer;
+    margin: 30px;
+}

@@ -1,0 +1,50 @@
+body {
+    overflow: hidden;
+}
+
+.main {
+    background-image: url("../Img/BackgroundHome.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: 0px -100px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    height: 100vh;
+}
+
+.titulo {
+    color: white;
+    font-size: 7em;
+    grid-column: 2;
+    position: relative;
+    left: -50px;
+    top: -50px;
+    cursor: pointer;
+}
+
+.login {
+    color: white;
+    font-size: 3.5em;
+    grid-column: 7;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.viagens {
+    color: white;
+    font-size: 4em;
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    left: -100px;
+    cursor: pointer;
+}
