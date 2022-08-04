@@ -1,0 +1,120 @@
+.list-page {
+    background-image: url("../Img/BackgoundApp.jpg");
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    background-position: left top;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userHeader {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+}
+
+.userTitulo {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 0;
+    margin-left: 100px;
+    cursor: pointer;
+    grid-column: 1;
+    position: relative;
+    left: -300px;
+    top: -50px;
+    height: 100px;
+}
+
+.userHeaderTitle {
+    color: white;
+    font-size: 3.5em;
+    cursor: pointer;
+    grid-column: 4;
+    margin: 0;
+    height: 60px;
+    padding: 0;
+    position: relative;
+    top: 40px;
+    left: -100px;
+}
+
+.trips-list-Container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    overflow-x: scroll;
+    width: 90vw;
+    position: relative;
+    left: 100px;
+}
+
+.trip-Container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+    width: 400px;
+    background-color: black;
+    border-radius: 20px;
+    height: 600px;
+}
+
+.list-trips {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    height: 50px;
+    width: 380px;
+    border-radius: 30px;
+    margin: 10px;
+    padding-top: 15px;
+}
+
+.descricao {
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: solid 1px white;
+}
+
+.destino {
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: solid 1px white;
+}
+
+.data {
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: solid 1px white;
+}
+
+.btn-aplicar {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 340px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: #7DDBF9;
+    cursor: pointer;
+    margin: 30px;
+}
