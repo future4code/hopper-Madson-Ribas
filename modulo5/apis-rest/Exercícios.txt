@@ -1,0 +1,40 @@
+Exercício 1
+
+Vamos começar fazendo um endpoint que busque todos os usuários de uma lista. 
+a. Qual método HTTP você deve utilizar para isso?*
+Devemos utilizar o método GET para retornar a lista com os usuários.
+
+b. Como você indicaria a **entidade** que está sendo manipulada?*
+Indiquei como /users.
+
+Exercício 2
+
+Agora, vamos criar um novo endpoint, que busque todos os usuários que tenham uma propriedade `type` específica, 
+recebendo apenas um `type` por vez. Após isso, responda:
+
+a. Como você passou os parâmetros de type para a requisição? Por quê?
+Usando uma condicional IF, pois assim, consigo trabalhar com as duas possibilidades e ainda posso tratar possíveis erros. 
+
+b. Você consegue pensar em um jeito de garantir que apenas `types` válidos sejam utilizados?
+Sim, passando apenas as duas possibilidades como alternativas verdadeiras como condições no IF.
+
+Exercício 3
+
+Vamos agora praticar o uso de buscas mais variáveis. Faça agora um endpoint de busca que encontre um usuário buscando por nome.
+
+a. Qual é o tipo de envio de parâmetro que costuma ser utilizado por aqui?*
+Usamos o body da requisição.
+
+b. Altere este endpoint para que ele devolva uma mensagem de erro caso nenhum usuário tenha sido encontrado.
+
+Exercício 4
+
+Fizemos algumas buscas no nosso conjunto de itens, agora é hora de **adicionar** coisas. Comecemos criando um usuário na nossa lista. 
+Crie um endpoint que use o método `POST` para adicionar um item ao nosso conjunto de usuários.
+
+a. Mude o método do endpoint para `PUT`. O que mudou?
+Nos testes não houveram alterações nos resultados.
+
+b. Você considera o método `PUT` apropriado para esta transação? Por quê?
+Não, pois, o método PUT pode alterar dados já existentes, caso não sejam feitos os tratamentos adequados das informações, por exemplo,
+se inserirmos um id já exisitente acabaríamos substituíndo um usuário ao invés de criar um novo.
