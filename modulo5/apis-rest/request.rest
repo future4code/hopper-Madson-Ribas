@@ -1,0 +1,27 @@
+GET http://localhost:3003/users
+Content-Type: application/json
+###
+GET http://localhost:3003/userType
+Content-Type: application/json
+
+{
+    "type": "ADMIN"
+}
+###
+GET http://localhost:3003/userName
+Content-Type: application/json
+
+{
+    "name": "dory"
+}
+###
+PUT  http://localhost:3003/criarUsuario
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Mandy",
+    "email": "mandy@gmail.com",
+    "type": "ADMIN",
+    "age": 13
+}
