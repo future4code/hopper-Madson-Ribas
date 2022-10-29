@@ -1,0 +1,19 @@
+POST http://localhost:3003/users/newUser
+Content-Type: application/json
+
+{
+    "name":"Mandy",
+    "email": "maandy@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3003/posts/newPost
+Content-Type:  application/json
+
+{
+    "photo": "http://url_photo.com.br",
+    "description": "Por do Sol S2",
+    "type": "normal",
+    "authorId": "064b6ecb-ed8c-4b88-9b03-e68f95792d74"
+}
