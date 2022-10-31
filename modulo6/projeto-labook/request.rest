@@ -2,9 +2,9 @@ POST http://localhost:3003/users/newUser
 Content-Type: application/json
 
 {
-    "name":"Mandy",
-    "email": "maandy@gmail.com",
-    "password": "123456"
+    "name":"Rosangela",
+    "email": "rosangela@gmail.com",
+    "password": "456123"
 }
 
 ###
@@ -13,7 +13,30 @@ Content-Type:  application/json
 
 {
     "photo": "http://url_photo.com.br",
-    "description": "Por do Sol S2",
+    "description": "O tamanho desse prato!!!",
     "type": "normal",
-    "authorId": "064b6ecb-ed8c-4b88-9b03-e68f95792d74"
+    "authorId": "d945da2b-7fea-4938-81da-086f2b2302e9"
+}
+
+###
+GET http://localhost:3003/posts/search/4cf092da-ca3f-462e-9ce3-c793320e6ef1
+
+###
+
+POST http://localhost:3003/friends/addFriend
+Content-Type: application/json
+
+{
+    "userId": "064b6ecb-ed8c-4b88-9b03-e68f95792d74",
+    "friendId": "2f52c7a3-4cf4-4a88-bb6b-9845253eb7b3"
+}
+
+###
+
+POST http://localhost:3003/friends/removeFriend
+Content-Type: application/json
+
+{
+    "userId": "064b6ecb-ed8c-4b88-9b03-e68f95792d74",
+    "friendId": "2f52c7a3-4cf4-4a88-bb6b-9845253eb7b3"
 }
