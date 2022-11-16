@@ -1,0 +1,32 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Norman Osbourne", 
+   "email": "osbourne@oscorp.com",
+   "password": "ihatepeter"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "osbourne@oscorp.com" ,
+   "password": "ihatepeter"
+}
+
+###
+
+GET http://localhost:3003/user/profile
+Content-Type: application/application/json
+
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlkMzJiODRiLWFmYmUtNDUwNC1hNDIyLTQ3MTcwZGIwNzE0ZSIsImlhdCI6MTY2ODEzNDg1MCwiZXhwIjoxNjY4MTM4NDUwfQ.a6l35rT8yKMoIRqLY9EJ0KmGjfzEoQZCK1ioP1RPNsg"
+
+{
+   "email": "osbourne@oscorp.com" 
+}
+
+###
+
