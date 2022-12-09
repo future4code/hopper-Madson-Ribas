@@ -1,0 +1,13 @@
+{
+   "scripts": {
+      "exercicio1": "tsnd --transpile-only --ignore-watch node_modules ./src/Exercicio1",
+      "exercicio2": "tsnd --transpile-only --ignore-watch node_modules ./src/Exercicio2",
+      "exercicio3": "tsnd --transpile-only --ignore-watch node_modules ./src/Exercicio3",
+      "exercicio4": "tsnd --transpile-only --ignore-watch node_modules ./src/Exercicio4"
+   },
+   "devDependencies": {
+      "@types/node": "^15.14.9",
+      "ts-node-dev": "^1.1.8",
+      "typescript": "^4.9.4"
+   }
+}
